@@ -7,17 +7,14 @@ pipeline {
             }
         }
         stage('Test') {
-            agent {
-                docker {
-                    image 'node:16-alpine'
+            agent any
+            steps {
+                script {
+                    docker.image('node:16-alpine').inside {
+                        sh 'node --version'
+                    }
                 }
             }
-            steps {
-                sh 'node --version'
-                // Añade más pasos de prueba según sea necesario
-            }
         }
-        // Añade más etapas si es necesario
     }
 }
-
