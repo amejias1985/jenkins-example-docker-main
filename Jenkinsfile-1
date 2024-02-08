@@ -3,21 +3,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Specify your build steps here
+                // Pasos de construcción
             }
         }
         stage('Test') {
-            agent {
-                docker {
-                    image 'node:16-alpine'
-                }
-            }
             steps {
-                sh 'node --version'
-                // Add more test steps here
+                // Pasos de prueba
             }
         }
-        // Add more stages as needed
+        // Añade más etapas según sea necesario
     }
 }
-
