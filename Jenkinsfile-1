@@ -14,7 +14,10 @@ pipeline {
             }
             steps {
                 sh 'node --version'
+                // Añade más pasos de prueba según sea necesario
             }
         }
+        // Añade más etapas si es necesario
     }
 }
+
